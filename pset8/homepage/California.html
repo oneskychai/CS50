@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>California</title>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("navigation.html");
+        });
+        </script>
+
+        <h1>Explore the Beauty of California</h1>
+
+        <img class="main_img" src="Images/Lassen_Volcano.jpg" alt="Lassen Volcano">
+
+        <h2>Where in California would you like to explore?</h2>
+
+        <div class="d-grid gap-2 col-2 mx-auto">
+            <button id="first" type="button" class="btn btn-success">Lassen</button>
+            <button id="second" type="button" class="btn btn-success">Yosemite</button>
+            <div style="padding: 0px 0px 25px"></div>
+        </div>
+
+        <div id="lassen" style="display: none">
+            <h1>Lassen Volcanic National Park</h1>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Lassen_Volcano_2.jpg">
+                    <img src="Images/Lassen_Volcano_2.jpg" alt="Manzanita Lake">
+                </a>
+                <div class="desc">Lassen Volcano reflected in Manzanita Lake at sunrise</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Lassen_Volcano.jpg">
+                    <img src="Images/Lassen_Volcano.jpg" alt="Lassen Volcano">
+                </a>
+                <div class="desc">Forest view of cloud capped Lassen Volcano with moon</div>
+            </div>
+
+            <div class="push3"></div>
+        </div>
+
+        <div id="yosemite" style="display: none">
+            <h1>Yosemite National Park</h1>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Yosemite.jpg">
+                    <img src="Images/Yosemite.jpg" alt="">
+                </a>
+                <div class="desc">A gorgeous waterfall cascading down to Yosemite Valley</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Yosemite_2.jpg">
+                    <img src="Images/Yosemite_2.jpg" alt="Red Rock View">
+                </a>
+                <div class="desc">The dome-studded high country of Tuolumne Meadows </div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Sequoia.jpg">
+                    <img src="Images/Sequoia.jpg" alt="A mighty Sequoia tree">
+                </a>
+                <div class="desc">A massive Sequoia tree in Mariposa Grove</div>
+            </div>
+
+            <div class="push2"></div>
+        </div>
+
+        <script>
+            let lass = document.getElementById('lassen');
+            let yos = document.getElementById('yosemite');
+
+            document.querySelector('#first').onclick = function() {
+                lass.style.display = 'block';
+                yos.style.display = 'none';
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+
+            document.querySelector('#second').onclick = function() {
+                lass.style.display = 'none';
+                yos.style.display = 'block';
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+        </script>
+
+        <div id="foot-placeholder"></div>
+        <script>
+        $(function(){
+          $("#foot-placeholder").load("footer.html");
+        });
+        </script>
+    </body>
+</html>

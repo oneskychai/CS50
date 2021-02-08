@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>Arizona</title>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("navigation.html");
+        });
+        </script>
+
+        <h1>Explore the Beauty of Arizona</h1>
+
+        <img class="main_img" src="Images/The_Heart_of_Cathedral_Rock.jpg" alt="Red Rock View">
+
+        <h2>Where in Arizona would you like to explore?</h2>
+
+        <div class="d-grid gap-2 col-2 mx-auto">
+            <button id="first" type="button" class="btn btn-success">Chiricahua</button>
+            <button id="second" type="button" class="btn btn-success">Sedona</button>
+            <div style="padding: 0px 0px 25px"></div>
+        </div>
+
+        <div id="chiricahua" style="display: none">
+            <h1>The Chiricahua Wilderness</h1>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Chiricahua_Wilderness.jpg">
+                    <img src="Images/Chiricahua_Wilderness.jpg" alt="Duck on a Rock">
+                </a>
+                <div class="desc">Duck on a Rock, Heart of the Rocks Loop Trail</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Chiricahua_Wilderness_2.jpg">
+                    <img src="Images/Chiricahua_Wilderness_2.jpg" alt="Face in the Rocks">
+                </a>
+                <div class="desc">Face in the rocks, Heart of the Rocks Loop Trail</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Chiricahua_Wilderness_3.jpg">
+                    <img src="Images/Chiricahua_Wilderness_3.jpg" alt="Rhyolite Canyon">
+                </a>
+                <div class="desc">Rhyolite Canyon, Big Loop Trail</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Portal.jpg">
+                    <img src="Images/Portal.jpg" alt="Sunset on the Rocks">
+                </a>
+                <div class="desc">Sunset at Sunny Flat Campground in Portal</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Portal_2.jpg">
+                    <img src="Images/Portal_2.jpg" alt="Closeup of an agave">
+                </a>
+                <div class="desc">These beautiful agave succulents abound in Portal</div>
+            </div>
+
+            <div class="push1"></div>
+        </div>
+
+        <div id="sedona" style="display: none">
+            <h1>The Red Rocks of Sedona</h1>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/The_Birthing_Cave.jpg">
+                    <img src="Images/The_Birthing_Cave.jpg" alt="Red Rock View">
+                </a>
+                <div class="desc">Looking out of The Birthing Cave near Long Canyon</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Bear_Mountain.jpg">
+                    <img src="Images/Bear_Mountain.jpg" alt="Red Rock View">
+                </a>
+                <div class="desc">View from the fourth bench of Bear Mountain</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Red_Rock_Crossing.jpg">
+                    <img src="Images/Red_Rock_Crossing.jpg" alt="Creek with Red Rocks">
+                </a>
+                <div class="desc">Oak Creek and Cathedral Rock at Red Rock Crossing</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/The_Heart_of_Cathedral_Rock.jpg">
+                    <img src="Images/The_Heart_of_Cathedral_Rock.jpg" alt="Red Rock View">
+                </a>
+                <div class="desc">View from the saddle at the end of the Cathedral Rock Trail</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Bell_Rock.jpg">
+                    <img src="Images/Bell_Rock.jpg" alt="Looking down a Red Rock Wall">
+                </a>
+                <div class="desc">The view looking down the east side of Bell Rock</div>
+            </div>
+
+            <div class="push2"></div>
+        </div>
+
+        <script>
+            let chir = document.getElementById('chiricahua');
+            let sed = document.getElementById('sedona');
+
+            document.querySelector('#first').onclick = function() {
+                chir.style.display = 'block';
+                sed.style.display = 'none';
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+
+            document.querySelector('#second').onclick = function() {
+                chir.style.display = 'none';
+                sed.style.display = 'block';
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+        </script>
+
+        <div id="foot-placeholder"></div>
+        <script>
+        $(function(){
+          $("#foot-placeholder").load("footer.html");
+        });
+        </script>
+    </body>
+</html>

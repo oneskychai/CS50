@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>Oregon</title>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("navigation.html");
+        });
+        </script>
+
+        <h1>Explore the Beauty of Oregon</h1>
+
+        <img class="main_img" src="Images/Crater_Lake_3.jpg" alt="Crater Lake">
+
+        <h2>Where in Oregon would you like to explore?</h2>
+
+        <div class="d-grid gap-2 col-3 mx-auto">
+            <button id="first" type="button" class="btn btn-success">Crater Lake</button>
+            <button id="second" type="button" class="btn btn-success">Mackenzie River</button>
+            <div style="padding: 0px 0px 25px"></div>
+        </div>
+
+        <div id="crater" style="display: none">
+            <h1>Crater Lake National Park</h1>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Crater_Lake_3.jpg">
+                    <img src="Images/Crater_Lake_3.jpg" alt="Crater Lake">
+                </a>
+                <div class="desc">Crater Lake carpeted with snow in early summer</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Crater_Lake_2.jpg">
+                    <img src="Images/Crater_Lake_2.jpg" alt="Crater Lake">
+                </a>
+                <div class="desc">View of Crater Lake from the end of the Cleetwood Cove Trail</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Crater_Lake_4.jpg">
+                    <img src="Images/Crater_Lake_4.jpg" alt="Crater Lake">
+                </a>
+                <div class="desc">Cliffs at the end of the Cleetwood Cove Trail</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Crater_Lake.jpg">
+                    <img src="Images/Crater_Lake.jpg" alt="Crater Lake">
+                </a>
+                <div class="desc">View of Crater Lake from the Watchman Lookout</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Crater_Lake_5.jpg">
+                    <img src="Images/Crater_Lake_5.jpg" alt="Crater Lake">
+                </a>
+                <div class="desc">Christopher basking in the beauty of Crater Lake</div>
+            </div>
+
+            <div class="push2"></div>
+        </div>
+
+        <div id="mackenzie" style="display: none">
+            <h1>The Glorious Mackenzie River</h1>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Mackenzie_River.jpg">
+                    <img src="Images/Mackenzie_River.jpg" alt="The Mackenzie River">
+                </a>
+                <div class="desc">A cascade spilling into the liquid blue of the Mackenzie</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/The_Blue_Pool_3.jpg">
+                    <img src="Images/The_Blue_Pool_3.jpg" alt="The Blue Pool">
+                </a>
+                <div class="desc">View of Tamolitch Blue Pool from the southeast</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/The_Blue_Pool.jpg">
+                    <img src="Images/The_Blue_Pool.jpg" alt="The Blue Pool">
+                </a>
+                <div class="desc">View of Tamolitch Blue Pool from the northwest</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/The_Blue_Pool_2.jpg">
+                    <img src="Images/The_Blue_Pool_2.jpg" alt="The Blue Pool">
+                </a>
+                <div class="desc">View of Tamolitch BLue Pool from the north</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Sahalie_Falls.jpg">
+                    <img src="Images/Sahalie_Falls.jpg" alt="Sahalie Falls">
+                </a>
+                <div class="desc">Sahalie Falls plunging 100 ft over its lava dam</div>
+            </div>
+
+            <div class="push3"></div>
+        </div>
+
+        <script>
+            let crater = document.getElementById('crater');
+            let mack = document.getElementById('mackenzie');
+
+            document.querySelector('#first').onclick = function() {
+                crater.style.display = 'block';
+                mack.style.display = 'none';
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+
+            document.querySelector('#second').onclick = function() {
+                crater.style.display = 'none';
+                mack.style.display = 'block';
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+        </script>
+
+        <div id="foot-placeholder"></div>
+        <script>
+        $(function(){
+          $("#foot-placeholder").load("footer.html");
+        });
+        </script>
+    </body>
+</html>

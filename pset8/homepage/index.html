@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>Explore Nature</title>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("navigation.html");
+        });
+        </script>
+
+        <h1>Are You Ready to Explore the Beauty of Nature?</h1>
+
+        <img class="main_img" src="Images/Mesa_Falls.jpg" alt="Picture of a Waterfall">
+
+        <p class="std_para">Welcome to the Beauty of Nature webpage! This site is dedicated to the awe inspiring beauty of natural landscpaes.
+        You can explore some of my favorite places here by first selecting a state. Next, select the area of the state you wish to explore.
+        Finally, you can look through the various images for that area. Enjoy the beauty!</p>
+
+        <div id="foot-placeholder"></div>
+        <script>
+        $(function(){
+          $("#foot-placeholder").load("footer.html");
+        });
+        </script>
+    </body>
+</html>

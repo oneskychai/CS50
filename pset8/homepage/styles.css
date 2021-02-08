@@ -1,0 +1,69 @@
+h1
+{
+  text-align: center;
+  font-family: Papyrus;
+  padding: 50px;
+}
+
+h2
+{
+  text-align: center;
+  font-family: Papyrus;
+  padding: 40px 0px 20px;
+}
+
+.push1
+{
+  height: 250px;
+}
+
+.push2
+{
+  height: 380px;
+}
+
+.push3
+{
+  height: 290px;
+}
+
+.main_img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.std_para
+{
+  text-align: center;
+  font-family: Georgia;
+  font-size: 20px;
+  padding: 50px 150px 25px;
+}
+
+.gallery
+{
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+.gallery:hover
+{
+  border: 1px solid #777;
+}
+
+.gallery img
+{
+  width: 100%;
+  height: auto;
+}
+
+.desc
+{
+  padding: 15px;
+  text-align: center;
+}

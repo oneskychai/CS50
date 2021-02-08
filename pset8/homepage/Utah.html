@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>Utah</title>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("navigation.html");
+        });
+        </script>
+
+        <h1>Explore the Beauty of Utah</h1>
+
+        <img class="main_img" src="Images/Observation_Point.jpg" alt="Zion Canyon">
+
+        <h2>Where in Utah would you like to explore?</h2>
+
+        <div class="d-grid gap-2 col-2 mx-auto">
+            <button id="first" type="button" class="btn btn-success">Toadstools</button>
+            <button id="second" type="button" class="btn btn-success">Zion</button>
+            <div style="padding: 0px 0px 25px"></div>
+        </div>
+
+        <div id="toad" style="display: none">
+            <h1>The Toadstools Trail </h1>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Toadstools_Trail.jpg">
+                    <img src="Images/Toadstools_Trail.jpg" alt="Toadstool Hoodoo">
+                </a>
+                <div class="desc">A signature toadstool hoodoo graced by a waxing gibbous moon</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Toadstools_Trail_4.jpg">
+                    <img src="Images/Toadstools_Trail_4.jpg" alt="Toadstool Hoodoos">
+                </a>
+                <div class="desc">The view approaching the end of the Toadstools Trail</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Toadstools_Trail_5.jpg">
+                    <img src="Images/Toadstools_Trail_5.jpg" alt="Cavern in White Rocks">
+                </a>
+                <div class="desc">A cavern nestled under the towering white rocks</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Toadstools_Trail_3.jpg">
+                    <img src="Images/Toadstools_Trail_3.jpg" alt="Toadstool Hoodoos">
+                </a>
+                <div class="desc">The alien landscape at the end of the Toadstools Trail</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Toadstools_Trail_2.jpg">
+                    <img src="Images/Toadstools_Trail_2.jpg" alt="Toadstool Hoodoos">
+                </a>
+                <div class="desc">More toadstool hoodoos to the south of the trail's end</div>
+            </div>
+
+            <div class="push2"></div>
+        </div>
+
+        <div id="zion" style="display: none">
+            <h1>Zion National Park</h1>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Observation_Point.jpg">
+                    <img src="Images/Observation_Point.jpg" alt="Zion Canyon">
+                </a>
+                <div class="desc">Looking down into Zion Canyon from Observation Point</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Cable_Mountain.jpg">
+                    <img src="Images/Cable_Mountain.jpg" alt="Cable Mountain Draw Works">
+                </a>
+                <div class="desc">The old draw works used to lower timber down from Cable Mountain</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/East_Zion.jpg">
+                    <img src="Images/East_Zion.jpg" alt="Mesas in East Zion">
+                </a>
+                <div class="desc">The mesas near Zion's east entrance dappled with fall foliage</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Snow_on_Angels_Landing.jpg">
+                    <img src="Images/Snow_on_Angels_Landing.jpg" alt="Snowstorm in Zion">
+                </a>
+                <div class="desc">An unexpected snowstorm on the perch of Angel's Landing</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="Images/Angels_Landing.jpg">
+                    <img src="Images/Angels_Landing.jpg" alt="Angels Landing">
+                </a>
+                <div class="desc">Looking down into Zion Canyon from Angel's Landing</div>
+            </div>
+
+            <div class="push3"></div>
+        </div>
+
+        <script>
+            let toad = document.getElementById('toad');
+            let zion = document.getElementById('zion');
+
+            document.querySelector('#first').onclick = function() {
+                toad.style.display = 'block';
+                zion.style.display = 'none';
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+
+            document.querySelector('#second').onclick = function() {
+                toad.style.display = 'none';
+                zion.style.display = 'block';
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+        </script>
+
+        <div id="foot-placeholder"></div>
+        <script>
+        $(function(){
+          $("#foot-placeholder").load("footer.html");
+        });
+        </script>
+    </body>
+</html>
