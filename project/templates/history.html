@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h3>These are the functions you have analyzed</h3>
+
+    <div class="push2"></div>
+
+    <table>
+        <tr>
+            <th>Start</th>
+            <th>Multiplier</th>
+            <th>Buckets</th>
+            <th>Variance</th>
+            <th>Empties</th>
+            <th>Most</th>
+            <th>Least</th>
+            <th>Analyzed</th>
+        </tr>
+        {% for row in rows %}
+            <tr>
+                <td>{{ row["start"] }}</td>
+                <td>{{ row["multiplier"] }}</td>
+                <td>{{ row["buckets"] }}</td>
+                <td>{{ row["variance"] }}</td>
+                <td>{{ row["empty"] }}</td>
+                <td>{{ row["max"] }}</td>
+                <td>{{ row["min"] }}</td>
+                <td>{{ row["timestamp"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

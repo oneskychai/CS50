@@ -1,0 +1,82 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.orange
+{
+    color: #eb660a;
+}
+
+.green
+{
+    color: #13ab08;
+}
+
+p
+{
+    text-align: left;
+}
+
+.push1
+{
+    padding: 5px;
+}
+
+.push2
+{
+    padding: 8px;
+}
+
+.push3
+{
+    padding: 10px;
+}
+
+table
+{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th
+{
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even)
+{
+  background-color: #eeeeee;
+}
+
+tr
+{
+  border-top: solid 1px #cccccc;
+}

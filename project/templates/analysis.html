@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Analyze
+{% endblock %}
+
+{% block main %}
+    {% if not analyzed %}
+        <h4>Here is the analysis of the function you selected</h4>
+    {% endif %}
+
+    {% if analyzed %}
+        <h4>This function was analyzed by {{ row["username"] }} {{ row["timestamp"] }}</h4>
+    {% endif %}
+
+    <div class="push2"></div>
+
+    <table>
+        <tr>
+            <th>Start</th>
+            <th>Multiplier</th>
+            <th>Buckets</th>
+            <th>Variance</th>
+            <th>Empty</th>
+            <th>Most</th>
+            <th>Least</th>
+        </tr>
+
+        <tr>
+        {% if not analyzed %}
+            <td>{{ start }}</td>
+            <td>{{ multiplier }}</td>
+            <td>{{ buckets }}</td>
+            <td>{{ variance }}</td>
+            <td>{{ empty }}</td>
+            <td>{{ max }}</td>
+            <td>{{ min }}</td>
+        {% endif %}
+
+        {% if analyzed %}
+            <td>{{ row["start"] }}</td>
+            <td>{{ row["multiplier"] }}</td>
+            <td>{{ row["buckets"] }}</td>
+            <td>{{ row["variance"] }}</td>
+            <td>{{ row["empty"] }}</td>
+            <td>{{ row["max"] }}</td>
+            <td>{{ row["min"] }}</td>
+        {% endif %}
+        </tr>
+    </table>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Hashfuns
+{% endblock %}
+
+{% block main %}
+    <h4>My analyzed hash functions ordered by {{ order }}</h4>
+
+    <div class="push3"></div>
+
+    <form action="/" method="post">
+        <div class="form-group">
+            <select class="form-control" name="order" onchange="enableButton()">
+                <option disabled selected value>Order by</option>
+                <option value="start">Start ascending</option>
+                <option value="start DESC">Start descending</option>
+                <option value="multiplier">Multiplier ascending</option>
+                <option value="multiplier DESC">Multiplier descending</option>
+                <option value="buckets">Buckets ascending</option>
+                <option value="buckets DESC">Buckets descending</option>
+                <option value="variance">Variance ascending</option>
+                <option value="variance DESC">Variance descending</option>
+                <option value="empty">Empties ascending</option>
+                <option value="empty DESC">Empties descending</option>
+                <option value="max">Most ascending</option>
+                <option value="max DESC">Most descending</option>
+                <option value="min">Least ascending</option>
+                <option value="min DESC">Least descending</option>
+            </select>
+            <button id="goBtn" class="btn btn-primary" type="submit" disabled>Refresh</button>
+        </div>
+    </form>
+
+    <div class="push3"></div>
+
+    <table>
+            <tr>
+                <th>Start</th>
+                <th>Multiplier</th>
+                <th>Buckets</th>
+                <th>Variance</th>
+                <th>Empties</th>
+                <th>Most</th>
+                <th>Least</th>
+            </tr>
+
+        {% for row in rows %}
+            <tr>
+                <td>{{ row["start"] }}</td>
+                <td>{{ row["multiplier"] }}</td>
+                <td>{{ row["buckets"] }}</td>
+                <td>{{ row["variance"] }}</td>
+                <td>{{ row["empty"] }}</td>
+                <td>{{ row["max"] }}</td>
+                <td>{{ row["min"] }}</td>
+            </tr>
+        {% endfor %}
+        </tr>
+    </table>
+{% endblock %}

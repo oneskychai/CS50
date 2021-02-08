@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Analyze
+{% endblock %}
+
+{% block main %}
+    <h4>Select the parameters for your hash function</h4>
+
+    <div class="push1"></div>
+
+    <form action="/analyze" method="POST">
+        <div class="form-group">
+            <input style="width: 12%" class="form-control" id="start" name="start" placeholder="Start" type="number" min="1">
+        </div>
+        <div class="form-group">
+            <input style="width: 12%" class="form-control" id="multiplier" name="multiplier" placeholder="Multiplier" type="number" min="2">
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="buckets" name="buckets" placeholder="Buckets" type="number" min="1000" max="143091">
+        </div>
+        <button id="goBtn" class="btn btn-primary" type="submit" disabled>Analyze</button>
+    </form>
+
+    <script>
+        checkFields('#start, #multiplier, #buckets');
+    </script>
+{% endblock %}

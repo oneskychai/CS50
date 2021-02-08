@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Background
+{% endblock %}
+
+{% block main %}
+    <h4>Welcome to the <span class="orange" style="font-weight: bold">#</span><span class="green" style="font-weight: 500">HASH</span><span class="orange" style="font-weight: 400">fun</span> hash function analyzer!</h4>
+
+    <div class="push3"></div>
+
+    <p>This website was created as a fun way to analyze hash functions that follow a particular algorithm. For those who are unfamiliar with hash functions,
+    let's lay some foundation. Hash functions are a way to map arbitrary data elements to fixed-size values, or hash values, which can then be used to store
+    the data in the indices of what is known as a hash table. This method of allocation facilitates fast and efficient data retrieval, given the hash function
+    has even distribution. Read more about hash functions on <a href="https://en.wikipedia.org/wiki/Hash_function">Wikipedia</a>.</p>
+
+    <p>We will be looking at hash functions that use strings as inputs, specifically the 143,091 words in a particular dictionary. Each function will start
+    with an integer of your choosing. The function will then iterate over each character of a word, multiplying the current integer by a multiplier also of
+    your choosing, and then adding the ASCII value of the current character. Once the algorithm has been applied to each character of the word, the result will
+    be divided by the number of buckets in the hash table, which you will also choose. The hash value output will be the remainder of this division.</p>
+
+    <p>After the hash function has hashed all of the words in the dicitonary into the hash table, the table will be analyzed to calculate the variance of the
+    number of words in each bucket of the table. The number of empty buckets, as well as the most and least number of words in any given bucket will also be
+    calculated. If the hash function has good distribution, the variance will be low. The ideal hash function would have zero variance, with no empty buckets,
+    and one and only one word in each bucket. As this outcome is rather unlikely, we will be striving to find functions that have low variance, with few empty
+    buckets, and few words in each bucket.</p>
+
+    <p>All analyzed functions will be stored in a database. The index page will list all of the functions you have analyzed ordered however you choose. If you
+    wish to see the functions with the lowest variance analyzed by any user, click on the "Best" tab and select the number of functions to display. You can click
+    the "History" tab to see a chronological log of all of the functions you have analyzed. Have fun hashing with
+    <span class="orange">#</span><span class="green">HASH</span><span class="orange">fun</span>!</p>
+
+    <div class="form-group">
+        <select class="form-control">
+            <option value="large">Large Text</option>
+            <option value="initial" selected>Medium Text</option>
+            <option value="small">Small Text</option>
+        </select>
+    </div>
+
+    <script>
+        document.querySelector('select').onchange = function() {
+            content = document.querySelectorAll('p');
+            for (i = 0; i < content.length; i++)
+            {
+                content[i].style.fontSize = this.value;
+            }
+        }
+    </script>
+{% endblock %}
